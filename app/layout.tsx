@@ -45,7 +45,10 @@ export default function RootLayout({
                     content="width=device-width, initial-scale=1"
                 />
             </head>
-            <body className="w-full min-h-screen flex">
+            <body
+                className="w-full min-h-screen grid"
+                style={{ gridTemplateColumns: '1fr auto 1fr' }}
+            >
                 <Sidebar />
 
                 <div className="w-full">
@@ -53,6 +56,8 @@ export default function RootLayout({
 
                     <Footer />
                 </div>
+
+                <div></div>
             </body>
         </html>
     );

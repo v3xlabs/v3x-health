@@ -11,6 +11,7 @@ module.exports = {
         extend: {
             colors: {
                 notblack: '#1e1e1e',
+                notgreen: '#42FF23',
             },
         },
     },

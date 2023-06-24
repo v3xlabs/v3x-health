@@ -1,6 +1,9 @@
+import { ClusterStatistics } from '../components/ClusterStatistics/ClusterStatistics';
+import { ContainerGrid } from '../components/ContainerGrid/ContainerGrid';
+
 export default function App() {
     return (
-        <div className="mx-auto w-full flex items-center justify-center p-4 md:p-8">
+        <div className="mx-auto w-screen max-w-3xl flex items-center justify-center p-4 md:p-8">
             <div
                 className="grid w-full"
                 style={{
@@ -9,15 +12,28 @@ export default function App() {
                     gap: '1rem',
                 }}
             >
-                <div className="relative w-full bg-blue-400 col-span-7 row-span-3 rounded-md">
-                    <div className="absolute inset-0 bg-gradient-to-tr from-black/5 to-white/20"></div>
+                <div className="w-full col-span-12 flex items-center justify-center border border-notblack p-4">
+                    <div>v3x.health</div>
                 </div>
-                <div className="w-full bg-pink-200 col-span-5 h-[512px] row-span-2 rounded-md" />
-                <div className="w-full bg-gray-200 h-48 col-span-5 row-span-1 rounded-md" />
-                <div className="w-full bg-gray-200 h-64 col-span-4 rounded-md" />
-                <div className="w-full bg-gray-200 h-64 col-span-4 rounded-md" />
-                <div className="w-full bg-gray-200 h-64 col-span-4 rounded-md" />
-                <div className="w-full bg-gray-200 h-64 col-span-12 rounded-md" />
+
+                <div className="whitespace-pre-wrap col-span-12 py-10 px-6">
+                    &nbsp; &gt;&gt;&gt;&gt; If you are reading this there is a
+                    high chance our datacenter is on fire right now. We highly
+                    advice you to check back later.
+                </div>
+
+                <div className="col-span-12">
+                    <ClusterStatistics />
+                </div>
+                <div className="col-span-6">
+                    <ClusterStatistics />
+                </div>
+                <div className="col-span-6">
+                    <ClusterStatistics />
+                </div>
+                <div className="col-span-12">
+                    <ContainerGrid />
+                </div>
             </div>
         </div>
     );
