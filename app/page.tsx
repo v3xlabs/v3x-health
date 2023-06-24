@@ -1,6 +1,6 @@
 export default function App() {
     return (
-        <div className="mx-auto flex items-center justify-center px-4 md:px-8">
+        <div className="mx-auto w-full flex items-center justify-center p-4 md:p-8">
             <div
                 className="grid w-full"
                 style={{

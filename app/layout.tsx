@@ -4,7 +4,7 @@ import '../public/hack/hack.css';
 import React from 'react';
 
 import { Footer } from '../components/Footer/Footer';
-import { NavBar } from '../components/NavBar/NavBar';
+import { Sidebar } from '../components/Sidebar/Sidebar';
 
 export const metadata = {
     title: 'Health & Status',
@@ -17,7 +17,7 @@ export default function RootLayout({
 }) {
     return (
         <html lang="en">
-            <header>
+            <head>
                 <title>{metadata.title}</title>
                 <meta name="description" content={metadata.description} />
                 <meta property="og:title" content={metadata.title} />
@@ -44,13 +44,15 @@ export default function RootLayout({
                     name="viewport"
                     content="width=device-width, initial-scale=1"
                 />
-            </header>
-            <body className="w-full min-h-screen">
-                <NavBar />
+            </head>
+            <body className="w-full min-h-screen flex">
+                <Sidebar />
 
-                {children}
+                <div className="w-full">
+                    {children}
 
-                <Footer />
+                    <Footer />
+                </div>
             </body>
         </html>
     );

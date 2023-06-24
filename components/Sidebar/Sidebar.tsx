@@ -1,16 +1,16 @@
 import { FC } from 'react';
 
-export const NavBar: FC = () => {
+export const Sidebar: FC = () => {
     return (
-        <head className="w-full p-8 pb-4 pt-6 md:pt-6 md:pb-4 md:px-8 flex justify-between">
-            <div className="flex flex-col justify-center">
+        <header className="w-auto p-8 flex flex-col gap-4">
+            <div className="flex flex-col justify-center whitespace-nowrap">
                 <div className="bg-notblack w-fit font-bold">
                     <span className="text-white -1 mx-3">v3xlabs</span>
                 </div>
                 <div>Empowering open-source</div>
             </div>
             <nav className="flex">
-                <ul className="grid grid-rows-3 grid-flow-col gap-x-4">
+                <ul className="">
                     {[
                         ['.company', 'https://v3x.company'],
                         ['.wiki', 'https://v3x.wiki'],
@@ -22,7 +22,12 @@ export const NavBar: FC = () => {
                         <li key={label}>
                             <a
                                 href={href}
-                                className="hover:text-blue-500 hover:underline text-notblack"
+                                className={[
+                                    'hover:text-blue-500 hover:underline',
+                                    label == '.health'
+                                        ? 'text-blue-500'
+                                        : 'text-notblack',
+                                ].join(' ')}
                             >
                                 {label}
                             </a>
@@ -30,6 +35,6 @@ export const NavBar: FC = () => {
                     ))}
                 </ul>
             </nav>
-        </head>
+        </header>
     );
 };
