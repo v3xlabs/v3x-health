@@ -16,7 +16,7 @@ export const ProgressBar: FC<{
                                 key={index}
                                 className={`w-2 h-[1em] ${
                                     index < progress
-                                        ? 'bg-green-500'
+                                        ? 'bg-notgreen'
                                         : 'bg-gray-200'
                                 }`}
                             />
