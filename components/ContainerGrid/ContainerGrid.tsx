@@ -4,7 +4,7 @@ import { Panel } from '../Panel/Panel';
 
 export const ContainerGrid: FC = () => {
     return (
-        <Panel title="C3 Cluster Containers">
+        <Panel title="C4 Cluster Containers">
             <div className="w-full flex flex-wrap gap-1">
                 {Array.from({ length: 94 }).map((_, index) => (
                     <div

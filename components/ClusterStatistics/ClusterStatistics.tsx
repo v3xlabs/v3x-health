@@ -9,7 +9,7 @@ export const ClusterStatistics = () => {
     );
 
     return (
-        <Panel title="C3 Cluster Statistics">
+        <Panel title="C4 Cluster Statistics">
             <div className="flex flex-col gap-1">
                 <ProgressBar progress={3} total={20} title="CPU" />
                 <ProgressBar progress={7} total={20} title="RAM" />
